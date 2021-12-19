@@ -1,0 +1,36 @@
+<!-- Take a string and remove adjacent duplicate characters of string using recursion.(two continuous two characters should be same)  -->
+<!-- Make a 2 user rock paper scissor game.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeDuplicates(input)
+        {
+            if(input.length<=1){
+               return input;
+            }
+            if(input[0]==input[1]){
+               return removeDuplicates(input.substring(1));
+            }
+            else{
+               return input[0] +
+               removeDuplicates(input.substring(1));
+            }
+        }
+ 
+        let S1 = "aaaaaabbbbcama"
+        document.write(removeDuplicates(S1)+"<br>");
+ 
+        let  S2 = "Maheera";
+        document.write(removeDuplicates(S2)+"<br>");
+ 
+    </script>
+</body>
+</html>

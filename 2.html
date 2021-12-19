@@ -1,0 +1,30 @@
+<!--2. Take a number and find its factorial and check how
+     many zeros it have. Don't use string functions. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findZero(n){
+            if(n<0){
+                return -1;
+            }
+            let count=0;
+            for(let i=5;Math.floor(n/i)>=1;i*=5){
+                count+= Math.floor(n/i);
+            }
+            return count;
+        }
+        let n= 100;
+        document.write("count of 0's in : "+100+ "!is = "+findZero(n));
+    </script>
+    
+</body>
+</html>
